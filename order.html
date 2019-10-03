@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">  
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- First Mobile Meta -->
+        
+        <link rel="stylesheet" href="styles/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        
+        <style>
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            .dropbtn:hover, .dropbtn:focus {
+                background-color: #3e8e41;
+            }
+            .dropdown {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 15px;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropdown a:hover {background-color: #f1f1f1}
+            .show {display:block;}                    
+            .orders {
+                background: #eee;
+                padding-top: 10px;
+                padding-bottom: 50px;
+            }
+            .orders .form-inline button {
+                margin-top: 15px;       
+            }            
+        </style>
+        
+    </head>
+    <body>
+
+        <!-- Start navbar -->
+
+        <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Start Of The Container -->
+          <div class="container">
+            <div class="navbar-header">                
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ournavbar" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>                
+              <a class="navbar-brand" href="#">Logo here</a>
+            </div>
+            <div class="collapse navbar-collapse" id="ournavbar">                
+                <ul class="nav navbar-nav navbar-right">                  
+                <li class="active"><a href="#">Home</a></li>                  
+                <li><a href="map.html">Map</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register Here</a></li>
+              </ul>                
+            </div>
+              
+          </div>
+        <!-- End Of The Container -->
+        
+        </nav>
+        
+        <!-- End Our Navbar -->
+        
+        <!-- Start Order -->
+        
+        <section class="orders text-center">            
+            <div class="container">
+                <div class="row">
+                    
+                    <h1>Order Now !</h1>
+                    <div class="dropdown">
+                        <button onclick="myFunction()" class="dropbtn">Select A Book</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <a href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                    </div>                
+                    <form class="form-inline">                
+                        <input class="form-control input-lg" type="text" placeholder="Enter Your Location">
+                        <button class="btn btn-primary btn-lg btn-block"><i class="fa fa-edit fa-lg"></i>Order</button>
+                    </form>
+                </div>                
+            </div>
+            
+        </section>
+        
+        <!-- End Order -->
+        
+        <!-- Start Ultimate Footer Section -->
+        
+        <section class="footer">        
+            <div class="copyright text-center">
+                Copyright &copy; 2017 <span>Our Library</span> .Inc
+            </div>
+        </section>
+        
+        <!-- End Ultimate Footer Section -->
+        
+        <script src="js/jquery-3.1.0.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+
+    </body>
+</html>
